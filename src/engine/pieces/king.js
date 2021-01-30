@@ -6,6 +6,18 @@ export default class King extends Piece {
     }
 
     getAvailableMoves(board) {
-        return new Array(0);
+        let location = board.findPiece(this)
+        let kingMoves = []
+        kingMoves.push(Square.at(location.row+1, location.col))
+        kingMoves.push(Square.at(location.row-1, location.col))
+        kingMoves.push(Square.at(location.row, location.col +1))
+        kingMoves.push(Square.at(location.row, location.col -1))
+        kingMoves.push(Square.at(location.row+1, location.col+1))
+        kingMoves.push(Square.at(location.row-1, location.col+1))
+        kingMoves.push(Square.at(location.row+1, location.col -1))
+        kingMoves.push(Square.at(location.row-1, location.col -1))
+
+
+
     }
 }
