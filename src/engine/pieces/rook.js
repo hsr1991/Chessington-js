@@ -1,5 +1,4 @@
-import Board from '../board';
-import Player from '../player';
+
 import Piece from './piece';
 import Square from '../square';
 import Pawn from '../../../src/engine/pieces/pawn';
