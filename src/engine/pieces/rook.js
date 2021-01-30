@@ -1,5 +1,8 @@
+import Board from '../board';
+import Player from '../player';
 import Piece from './piece';
 import Square from '../square';
+import Pawn from '../../../src/engine/pieces/pawn';
 
 export default class Rook extends Piece {
     constructor(player) {
@@ -19,8 +22,11 @@ export default class Rook extends Piece {
             if(j != location.col) {
             rookMoves.push(Square.at(location.row, j))
         }
+    }
+        // if (Pawn )
             
-        }
+        // }
         return rookMoves
     }
+    
 }

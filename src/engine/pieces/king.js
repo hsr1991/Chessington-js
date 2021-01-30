@@ -1,4 +1,7 @@
+import Board from '../board';
+import Player from '../player';
 import Piece from './piece';
+import Square from '../square';
 
 export default class King extends Piece {
     constructor(player) {
@@ -17,7 +20,7 @@ export default class King extends Piece {
         kingMoves.push(Square.at(location.row+1, location.col -1))
         kingMoves.push(Square.at(location.row-1, location.col -1))
 
-
+        return kingMoves
 
     }
 }
