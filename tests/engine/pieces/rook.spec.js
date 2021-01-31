@@ -3,7 +3,7 @@ import Rook from '../../../src/engine/pieces/rook';
 import Board from '../../../src/engine/board';
 import Player from '../../../src/engine/player';
 import Square from '../../../src/engine/square';
-import Pawn from '../../../src/engine/pieces/pawn';
+//import Pawn from '../../../src/engine/pieces/pawn';
 
 describe('Rook', () => {
 
@@ -11,17 +11,24 @@ describe('Rook', () => {
         let board;
         beforeEach(() => board = new Board());    
         
-        it('can move up/down/left/right', () => {
-            const rook = new Rook(Player.WHITE);
-            board.setPiece(Square.at(0, 0), rook);
-            //rook.moveTo(board, Square.at(2, 0));
-
-            const moves = rook.getAvailableMoves(board);
-        
-            moves.should.have.length(14);
-           // moves.should.deep.include(Square.at(?, ?));
+            it('can move up/down/left/right', () => {
+                const rook = new Rook(Player.WHITE);
+                board.setPiece(Square.at(0, 0), rook);
+                const moves = rook.getAvailableMoves(board);
+    
+               moves.should.have.length(14);
+               moves.should.deep.include(Square.at(0, 6));
         });
     
+
+//         it('can not go off the board', () => {
+//         const rook = new Rook(Player.WHITE);
+//       const moves = rook.getAvailableMoves(board);
+//        // board.setPiece(Square.at(0, 0), rook);
+//        // moves.should.have.length(14);
+//        // moves.should.not.deep.include(Square.at(9, 1))
+//         })
+
         
         // it('can only move one square if the pawn has only moved one square', () => {
         //     const rook = new Rook(Player.WHITE);

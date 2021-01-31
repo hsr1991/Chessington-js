@@ -22,10 +22,8 @@ export default class Rook extends Piece {
             rookMoves.push(Square.at(location.row, j))
         }
     }
-        // if (Pawn )
-            
-        // }
-        return rookMoves
-    }
-    
+
+          return rookMoves 
+
+}
 }
